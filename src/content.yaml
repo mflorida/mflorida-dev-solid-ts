@@ -1,0 +1,28 @@
+---
+content:
+  header:
+    name: Mark M. Florida
+    title: >
+      <span title={`I refuse to spell it 'Frontend'. How is that even pronounced?`}>
+        Senior Front-end Engineer
+      </span>
+
+  profile: >
+    I'm a person who likes to do the front-end things.
+
+  jobs:
+    - company: Contractor / Freelance
+      title: '',
+      dates:
+        start: 2023-01-02
+        end: Present
+      description: >
+        I kind of did some things. Kind of not.
+
+    - company: Commcast
+      title: Senior Front-end Engineer (Contractor),
+      dates:
+        start: 2022-08-15
+        end: 2022-12-21
+      description: >
+        I kind of did some things. Kind of not.
