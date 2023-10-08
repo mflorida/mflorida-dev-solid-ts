@@ -50,7 +50,9 @@ const baseKeywords = [
   'Turborepo',
 ];
 
-const output = ['/* Auto-generated file. DO NOT EDIT */'];
+const output = [
+  '/* Auto-generated file. DO NOT EDIT */'
+];
 
 output.push(
   'export const jobTitles = ' +

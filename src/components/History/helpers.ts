@@ -11,7 +11,7 @@ const months = [
   'October',
   'November',
   'December'
-];
+] as const;
 
 export function employmentPeriod(start: string, end: string) {
   console.log('employmentPeriod');
