@@ -1,6 +1,6 @@
-import Header from '../../components/Header';
-import Profile from '../../components/Profile';
-import Jobs from '../../components/History';
+import { Header } from '../../components/Header';
+import { Profile } from '../../components/Profile';
+import { History } from '../../components/History';
 
 import './style.scss';
 
@@ -9,7 +9,7 @@ export function Main() {
     <main id={`main`}>
       <Header />
       <Profile />
-      <Jobs />
+      <History />
     </main>
   );
 }

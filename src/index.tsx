@@ -1,6 +1,6 @@
 /* @refresh reload */
 import { render } from 'solid-js/web';
-import Main from './views/Main';
+import { Main } from './views/Main';
 
 import './global.css';
 
