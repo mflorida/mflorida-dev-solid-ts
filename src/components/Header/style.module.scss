@@ -1,5 +1,9 @@
-#header {
+.header {
   display: flex;
   justify-content: space-between;
   color: darkgreen;
+
+  span {
+    color: red;
+  }
 }
