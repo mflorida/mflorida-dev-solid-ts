@@ -1,5 +1,6 @@
 import type { JobEntry } from '../../types.ts';
 import { employmentPeriod } from './helpers.ts';
+import style from './style.module.scss';
 
 type JobProps = {
   data: JobEntry
@@ -10,12 +11,14 @@ export function Job({ data }: JobProps) {
     ? `- ${data.title}`
     : '';
   return (
-    <section>
+    <li class={style.job}>
       <header>
         <h3>{data.company} {title}</h3>
-        <div class={'dates'}>{employmentPeriod(data.dates.start, data.dates.end)}</div>
-        <p>{data.description}</p>
+        <h4 class={'dates'}>
+          {employmentPeriod(data.dates.start, data.dates.end)}
+        </h4>
       </header>
-    </section>
+      {data.description}
+    </li>
   );
 }

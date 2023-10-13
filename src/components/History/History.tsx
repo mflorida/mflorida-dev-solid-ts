@@ -1,15 +1,17 @@
 import { For } from 'solid-js';
 import { Job } from './Job.tsx';
 import { content } from '../../content.tsx';
-import './style.scss';
+import style from './style.module.scss';
 
 export function History() {
   return (
-    <section id={`jobs`}>
+    <section id={`work-history`} class={style.css}>
       <h2>Work History</h2>
-      <For each={content.jobs}>
-        {(job) => <Job data={job} />}
-      </For>
+      <ul>
+        <For each={content.jobs}>
+          {(job) => <Job data={job} />}
+        </For>
+      </ul>
     </section>
   );
 }
