@@ -7,7 +7,8 @@ type JSXElement = (Element | DocumentFragment | string | undefined | null);
 
 type Header = {
   name: JSXElement,
-  title: JSXElement,
+  role: JSXElement,
+  tooltip?: string,
 }
 
 export type Content = {

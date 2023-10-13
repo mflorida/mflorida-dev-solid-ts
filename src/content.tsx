@@ -5,11 +5,8 @@ import { baseKeywords } from './keywordList.ts';
 export const content: Content = {
   header: {
     name: 'Mark M. Florida',
-    title: (
-      <span title={`I refuse to spell it 'Frontend'. How is that even pronounced?`}>
-        Senior Front-end Engineer
-      </span>
-    ) as Element
+    tooltip: `I refuse to spell it 'Frontend'. How is that even pronounced?`,
+    role: `Senior Front-end Engineer`
   },
   profile: (
     <>
@@ -78,7 +75,7 @@ export const content: Content = {
     },
     {
       title: 'Senior Front-end Engineer',
-      company: 'Commcast (Contract)',
+      company: 'Comcast (Contract)',
       dates: {
         start: '2022-08-15',
         end: '2022-12-21'
@@ -121,18 +118,18 @@ export const content: Content = {
     },
     {
       title: 'Senior Front-end Engineer',
-      company: 'Commcast (Contract)',
+      company: 'Charter Communications (Contract)',
       dates: {
-        start: '2023-08-15',
-        end: '2023-12-21'
+        start: '2021-09-08',
+        end: '2022-04-29'
       },
       description: (
         <p class={'job-description'}>
-          Modernized UI component library used by downstream Comcast teams • Improved CLI tools for scaffolding
-          and component development • Migrated packages to Turbo monorepo • Improved TypeScript code quality
-          • Pruned deprecated dependencies and refactored as needed • Updated unit tests to reflect current
-          implementations • Improved documentation through reorganization and inclusion of code samples
-          • Participated in code reviews and PR approvals
+          Improved JavaScript/React code quality and established migration strategy for critical internal web
+          application • Defined and demonstrated patterns for migration of React components away from 'Styled
+          Components' library to a greatly simplified implementation using Tailwind CSS • Greatly improved
+          developer experience with these new patterns • Managed daily workflow with industry-standard tools
+          like Jira and Bitbucket (Git)
         </p>
       ) as Element,
       keywords: [
@@ -144,7 +141,7 @@ export const content: Content = {
     },
     {
       title: 'Senior Front-end Engineer',
-      company: 'Commcast (Contract)',
+      company: 'Comcast (Contract)',
       dates: {
         start: '2023-08-15',
         end: '2023-12-21'

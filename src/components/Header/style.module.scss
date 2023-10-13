@@ -1,9 +1,13 @@
-.header {
+/* styling for page header */
+
+.css {
   display: flex;
+  padding-bottom: 1.2rem;
+  align-items: baseline;
   justify-content: space-between;
-  color: darkgreen;
+  border-bottom: 1px solid #d0d0d0;
 
   span {
-    color: red;
+
   }
 }
