@@ -46,3 +46,12 @@ h4 {
 p {
     margin: 0.8rem 0;
 }
+
+.relative {
+    position: relative;
+}
+
+.flex-end {
+    display: flex;
+    justify-content: flex-end;
+}

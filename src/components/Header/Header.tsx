@@ -3,7 +3,7 @@ import style from './style.module.scss';
 
 export function Header() {
   return (
-    <h1 id={`page-header`} class={style.css}>
+    <h1 class={style.css}>
       <span>
         {content.header.name}
       </span>

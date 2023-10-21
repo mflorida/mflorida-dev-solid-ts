@@ -21,11 +21,11 @@ export function employmentPeriod(start: string, end: string) {
     ? new Date(end + 'T01:01:01.001' + timeZoneOffset)
     : end;
   return (
-    (months[startDate.getMonth()] + ', ' + startDate.getFullYear()) +
+    (months[startDate.getMonth()] + ' ' + startDate.getFullYear()) +
     ' - ' +
     (
       endDate.getMonth && endDate.getFullYear
-        ? (months[endDate.getMonth()] + ', ' + endDate.getFullYear())
+        ? (months[endDate.getMonth()] + ' ' + endDate.getFullYear())
         : endDate
     )
   )

@@ -7,10 +7,10 @@ export default defineConfig({
   css: {
     transformer: 'postcss',
     modules: {
-      scopeBehaviour: 'local'
+      scopeBehaviour: 'local',
     },
     postcss: {
-      map: true
+      map: true,
     }
-  }
+  },
 });

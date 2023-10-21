@@ -1,15 +1,21 @@
-import { Header } from '../../components/Header';
-import { Profile } from '../../components/Profile';
-import { History } from '../../components/History';
-
-import './style.scss';
+import { Route, Routes } from '@solidjs/router';
+import { Home } from '../Home';
+import { Resume } from '../Resume';
+import { PageHeader } from './';
+import style from './style.module.scss';
 
 export function Main() {
   return (
-    <main id={`main`}>
-      <Header />
-      <Profile />
-      <History />
-    </main>
+    <div id={'page'} class={style.page}>
+      <PageHeader />
+      <main id={'main'} class={style.main}>
+        <Routes>
+          <Route path={'/'} component={Home} />
+          <Route path={'/home'} component={Home} />
+          <Route path={'/resume'} component={Resume} />
+          <Route path={'/cv'} component={Resume} />
+        </Routes>
+      </main>
+    </div>
   );
 }

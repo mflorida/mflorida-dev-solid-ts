@@ -1,4 +1,4 @@
-import { jobTitles, baseKeywords } from './keywordList.ts';
+import { jobTitles, baseKeywords } from './keywords.ts';
 
 export type JobTitle = typeof jobTitles[number];
 export type Keyword = typeof baseKeywords[number];

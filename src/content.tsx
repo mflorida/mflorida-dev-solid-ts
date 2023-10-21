@@ -1,5 +1,5 @@
 import type { Content } from './types.ts';
-import { baseKeywords } from './keywordList.ts';
+import { baseKeywords } from './keywords.ts';
 
 
 export const content: Content = {
