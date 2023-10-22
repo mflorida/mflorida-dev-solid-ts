@@ -1,8 +1,33 @@
-import type { Content } from './types.ts';
-import { baseKeywords } from './keywords.ts';
+import { JSXElement, Header } from '../../types.ts';
+import { jobTitles, baseKeywords } from '../../keywords.ts';
 
+type JobTitle = typeof jobTitles[number];
+type Keyword = typeof baseKeywords[number];
 
-export const content: Content = {
+type ResumeContent = {
+  header: Header,
+  profile: JSXElement,
+  keywords: Keyword[],
+  stack?: string[],
+  jobs: JobEntry[],
+}
+
+export type JobEntry = {
+  company: string,
+  title: JobTitle | string,
+  dates: JobDates,
+  description: JSXElement,
+  skills?: string[],
+  keywords: Keyword[],
+  // [k: string]: any,  // <-- cop-out 🤷‍♂️
+}
+
+type JobDates = {
+  start: string,
+  end: string,
+}
+
+export const content: ResumeContent = {
   header: {
     name: 'Mark M. Florida',
     tooltip: `I refuse to spell it 'Frontend'. How is that even pronounced?`,

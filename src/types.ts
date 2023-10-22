@@ -1,35 +1,8 @@
-import { jobTitles, baseKeywords } from './keywords.ts';
+export type JSXElement = (Element | DocumentFragment | string | undefined | null);
 
-export type JobTitle = typeof jobTitles[number];
-export type Keyword = typeof baseKeywords[number];
-
-type JSXElement = (Element | DocumentFragment | string | undefined | null);
-
-type Header = {
+export type Header = {
   name: JSXElement,
   role: JSXElement,
   tooltip?: string,
 }
 
-export type Content = {
-  header: Header,
-  profile: JSXElement,
-  keywords: Keyword[],
-  stack?: string[],
-  jobs: JobEntry[],
-}
-
-export type JobEntry = {
-  company: string,
-  title: JobTitle | string,
-  dates: JobDates,
-  description: JSXElement,
-  skills?: string[],
-  keywords: Keyword[],
-  // [k: string]: any,  // <-- cop-out 🤷‍♂️
-}
-
-type JobDates = {
-  start: string,
-  end: string,
-}

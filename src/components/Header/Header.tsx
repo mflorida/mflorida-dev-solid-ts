@@ -1,15 +1,13 @@
-import { content } from '../../content.tsx';
 import style from './style.module.scss';
 
-export function Header() {
+// Empty component is needed to fill space since <h1> is a flexbox container
+const Empty = () => <span></span>;
+
+export function Header({ left = null, right = null }) {
   return (
     <h1 class={style.css}>
-      <span>
-        {content.header.name}
-      </span>
-      <span title={content.header.tooltip} style={{ 'font-size': '0.8em' }}>
-        {content.header.role}
-      </span>
+      {left || <Empty />}
+      {right || <Empty />}
     </h1>
   );
 }

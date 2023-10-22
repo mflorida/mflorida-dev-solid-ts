@@ -1,4 +1,4 @@
-import type { JobEntry } from '../../types.ts';
+import type { JobEntry } from '../../views/Resume/content.tsx';
 import { employmentPeriod } from './helpers.ts';
 import style from './style.module.scss';
 
