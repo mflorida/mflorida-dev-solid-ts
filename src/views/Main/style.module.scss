@@ -4,13 +4,3 @@
   max-width: 960px;
   min-height: 100vh;
 }
-
-.main {
-  > :first-child {
-    margin-top: 0;
-  }
-
-  > :last-child {
-    margin-bottom: 0;
-  }
-}

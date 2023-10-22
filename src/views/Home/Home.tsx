@@ -6,7 +6,6 @@ export function Home() {
       width: '100%',
       'align-items': 'center',
       'justify-content': 'center',
-      'background-color': 'white',
       'font-size': '3rem',
     }}>
       <h1>

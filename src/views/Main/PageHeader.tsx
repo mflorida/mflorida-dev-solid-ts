@@ -9,7 +9,9 @@ export function PageHeader() {
         <A href={'/resume'}>Résumé</A>
       </nav>
       <span class={'links'}>
-        <a class={'github-link'} href={'https://github.com/mflorida'} target={'_blank'}>&nbsp;</a>
+        <a class={'github-link'} href={'https://github.com/mflorida'} target={'_blank'}>
+          <span></span>
+        </a>
       </span>
     </header>
   )
