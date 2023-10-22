@@ -4,9 +4,14 @@ import { jobTitles, baseKeywords } from '../../keywords.ts';
 type JobTitle = typeof jobTitles[number];
 type Keyword = typeof baseKeywords[number];
 
+type Summary = {
+  title: JSXElement,
+  body: JSXElement
+}
+
 type ResumeContent = {
   header: Header,
-  profile: JSXElement,
+  summary: Summary,
   keywords: Keyword[],
   stack?: string[],
   jobs: JobEntry[],
@@ -33,29 +38,32 @@ export const content: ResumeContent = {
     tooltip: `I refuse to spell it 'Frontend'. How is that even pronounced?`,
     role: `Senior Front-end Engineer`
   },
-  profile: (
-    <>
-      <p>
-        I'm an experienced senior front-end developer currently looking to join a team who's passionate about
-        shipping quality code that delivers real-world benefits in UX for end-users as well as fostering good
-        DX through thoughtfully built component libraries and APIs.
-      </p>
-      <p>
-        I've worked in all stages of the development lifecycle, from whiteboarding to release, and always keep
-        a project's overall goals in mind when contributing in ways that leverage my skills and experience. I'm
-        eager to learn and implement new technologies when needed. I know when to dig into code and when to dig
-        for more information before cracking open an IDE. I'm also comfortable diving into back-end code when
-        necessary to help track down an issue or identify an area that needs tweaking.
-      </p>
-      <p>
-        As a front-end developer, I take UX and DX very seriously. I'm passionate about creating performant and
-        intuitive UIs using modern best practices with front-end technologies including JavaScript, React,
-        TypeScript, semantic HTML, advanced CSS, Webpack, Tailwind CSS, etc. I thrive on collaborating with other
-        specialists such as: UX designers, back-end developers, QA, and DevOps engineers. I'm also comfortable
-        interfacing directly with clients and stakeholders as needed.
-      </p>
-    </>
-  ) as DocumentFragment,
+  summary: {
+    title: 'Profile',
+    body: (
+      <>
+        <p>
+          I'm an experienced senior front-end developer currently looking to join a team who's passionate about
+          shipping quality code that delivers real-world benefits in UX for end-users as well as fostering good
+          DX through thoughtfully built component libraries and APIs.
+        </p>
+        <p>
+          I've worked in all stages of the development lifecycle, from whiteboarding to release, and always keep
+          a project's overall goals in mind when contributing in ways that leverage my skills and experience. I'm
+          eager to learn and implement new technologies when needed. I know when to dig into code and when to dig
+          for more information before cracking open an IDE. I'm also comfortable diving into back-end code when
+          necessary to help track down an issue or identify an area that needs tweaking.
+        </p>
+        <p>
+          As a front-end developer, I take UX and DX very seriously. I'm passionate about creating performant and
+          intuitive UIs using modern best practices with front-end technologies including JavaScript, React,
+          TypeScript, semantic HTML, advanced CSS, Webpack, Tailwind CSS, etc. I thrive on collaborating with other
+          specialists such as: UX designers, back-end developers, QA, and DevOps engineers. I'm also comfortable
+          interfacing directly with clients and stakeholders as needed.
+        </p>
+      </>
+    ) as DocumentFragment
+  },
   keywords: [...baseKeywords],
   stack: [],
   jobs: [

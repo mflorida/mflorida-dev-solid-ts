@@ -1,5 +1,5 @@
 import { Header } from '../../components/Header';
-import { Profile } from '../../components/Profile';
+import { Summary } from '../../components/Summary';
 import { History } from '../../components/History';
 
 import { content } from './content.tsx';
@@ -22,7 +22,7 @@ export function Resume() {
   return (
     <div id={'resume'} class={'content'}>
       <Header left={<HeaderLeft />} right={<HeaderRight />} />
-      <Profile data={content} />
+      <Summary data={content.summary} />
       <History data={content} />
     </div>
   );
