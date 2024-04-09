@@ -1,7 +1,7 @@
 {
   "name": "mflorida-dev-solid-ts",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,13 +10,13 @@
     "gen:keywords": "node scripts/generateKeywords.js > src/keywords.ts"
   },
   "dependencies": {
-    "@solidjs/router": "^0.8.3",
-    "solid-js": "^1.7.12"
+    "@solidjs/router": "~0.8.4",
+    "solid-js": "~1.7.12"
   },
   "devDependencies": {
-    "sass": "^1.69.0",
-    "typescript": "^5.0.4",
-    "vite": "^4.4.11",
-    "vite-plugin-solid": "^2.7.0"
+    "sass": "~1.69.7",
+    "typescript": "~5.3.3",
+    "vite": "~5.0.13",
+    "vite-plugin-solid": "~2.8.3"
   }
 }
