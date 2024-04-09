@@ -1,6 +1,6 @@
 // ==================================================
 // Auto-generated file. DO NOT EDIT.
-// Created: 10/20/2023, 4:44:53 PM
+// Created: 4/9/2024, 5:54:23 PM GMT-05:00
 // ==================================================
 
 export const jobTitles = [
@@ -39,6 +39,26 @@ export const jobTitles = [
   "Full Stack Engineer",
   "Senior Full Stack Engineer"
 ] as const;
+
+export const experience = {
+  "Front-end Development": 14,
+  "HTML": 14,
+  "HTML5": 13,
+  "HTML 5": 13,
+  "CSS": 14,
+  "CSS3": 14,
+  "CSS Modules": 2,
+  "Tailwind CSS": 3,
+  "JavaScript": 12,
+  "ES6+": 8,
+  "React": 5,
+  "JSX": 5,
+  "TypeScript": 3,
+  "Redux": 3,
+  "Git": 7,
+  "Bash": 7,
+  "Shell scripting": 7
+} as const;
 
 export const baseKeywords = [
   "JavaScript",

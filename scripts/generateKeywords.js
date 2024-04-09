@@ -28,24 +28,34 @@ descriptions.forEach(desc => {
 const jobTitles = [...jobTitleMap.keys()];
 
 const currentDate = new Date();
+
+currentDate.setHours(0);
+currentDate.setMinutes(1);
+currentDate.setSeconds(1);
+currentDate.setMilliseconds(1);
+
 const currentYear = currentDate.getFullYear();
-const currentMonth = currentDate.getMonth() + 1;
-const currentDay = currentDate.getDate();
+// const currentMonthIndex = currentDate.getMonth();
+// const currentMonth = currentMonthIndex + 1;
+// const currentDay = currentDate.getDay();
+// const currentTime = currentDate.getTime();
+// const currentOffset = currentDate.getTimezoneOffset() * 60 * 1000;
+// const localTime = currentTime + currentOffset;
 
-const timeZoneOffset = currentDate.getTimezoneOffset();
-const localDateTime = `${currentYear}-${currentMonth}-${currentDay}T01:01:01.001${timeZoneOffset}`;
-const localDate = new Date(localDateTime);
+// const ISODateTime = `${currentYear}-${currentMonth}-${currentDay}T01:01:01.001${timeZoneOffset}`;
+// const localDateTime = `${currentMonth}/${currentDay}/${currentYear}, 12:00:01 AM`;
+// const localDate = new Date(localDateTime);
 
-// console.log('// localDateTime', localDateTime);
+// console.log('// ISODateTime', ISODateTime);
 // console.log('// localDate', localDate);
 // console.log('// Created: ' + localDate.toLocaleString() + '\n\n');
 
-const localYear = localDate.getFullYear();
+// const localYear = localDate.getFullYear();
 // const localMonth = localDate.getMonth() + 1;
 // const localDay = localDate.getDate();
 
 function since(year) {
-  return localYear - year;
+  return currentYear - year;
 }
 
 const technologies = {
@@ -108,10 +118,12 @@ const baseKeywords = [
   'YAML'
 ];
 
+const NOW = new Date();
+
 const output = [
   '// ==================================================',
   '// Auto-generated file. DO NOT EDIT.',
-  '// Created: ' + currentDate.toLocaleString(),
+  `// Created: ${NOW.toLocaleString('en-US', { timeZoneName: 'longOffset' })}`,
   '// ==================================================',
   ''
 ];
@@ -123,9 +135,16 @@ output.push(
 );
 
 output.push(
+  'export const experience = ' +
+  JSON.stringify(technologies, null, 2) +
+  ' as const;\n'
+)
+
+output.push(
   'export const baseKeywords = ' +
   JSON.stringify(baseKeywords, null, 2) +
-  ' as const;\n')
+  ' as const;\n'
+)
 
 // Hack to use a shell command to write output to a file.
 console.log(output.join('\n'));
